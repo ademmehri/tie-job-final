@@ -1,0 +1,62 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>
+  Connexion-TIEJOB
+</title>
+</head>
+<section>
+<div class="form">
+  <div class="donnee">
+    <form [formGroup]="formsignin"  class="form">
+      <div class="titre">
+        <img src="assets\log.png" alt="logo_TIEJOB">
+      </div>
+      <div class="text">
+        <h2>Connexion</h2>
+      </div>
+      <div class="g">  <div class="bar"></div></div>
+   <div class="p1">
+  <div>
+    <div class="email">
+      <label for="#">Email</label>
+      <div class="cont d" [style]="bgcol">
+        <i class='bx bx-envelope'></i>
+        <input  type="text" placeholder="Email" formControlName="email">
+      </div>
+   <p class="err">  {{result1}}</p>
+    </div>
+  
+    <div class="email">
+  <div>
+        <label for="#">Mot de passe</label>
+  </div>
+      <div class="cont d" [style]="bgcol2">
+        <i class='bx bx-lock-alt'></i>
+        <input  type="password" placeholder="+6 caractere" formControlName="password">
+      </div>
+      <p class="err">  {{result2}}</p>
+    </div>
+  
+  <div class="a">
+  <a  (click)="motpasseoubliee()">mot passe oublié ?</a>
+  </div>
+  <div class="b">
+    <div class="bt" (click)="onsubmit()">
+      <a  >Se Connecter</a>
+    </div>
+    </div>
+    <div class="text">
+      <p>N'avez pas un compte ? <a routerLink="/pageprincipale">S'inscrire</a></p> 
+    </div>
+  </div>
+   </div>
+
+    </form>
+</div>
+</div>
+
+<div class="image">
+  <img class="im" src="assets/n.png" alt="image_login">
+</div>
+</section>
